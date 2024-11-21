@@ -1,0 +1,171 @@
+@tailwind base;
+@tailwind components;
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  
+  color-scheme: light dark;
+  
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html{
+  --primary: 86, 129, 237;
+  --secondary: 154, 96, 252;
+  --bgColor: 255, 255, 255;
+  --textColor: 27, 31, 59;
+  --headerColor: 27, 31, 59;
+  --subHeaderColor: 27, 31, 59;
+}
+
+html[data-theme='light']{
+  --bgColor: 255, 255, 255;
+  --textColor: 27, 31, 59;
+  --headerColor: 27, 31, 59;
+  --subHeaderColor: 27, 31, 59;
+  }
+
+html[data-theme='dark'] {
+  --bgColor: 20, 25, 35;
+  --textColor: 238, 238, 238;
+  --headerColor: 255, 215, 145;
+  --subHeaderColor: 154, 96, 252;
+}
+
+#root{
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(var(--bgColor));
+  color: rgb(var(--textColor));
+  overflow: hidden auto;
+}
+
+.main-body{
+  width: 100%;
+  height: calc(100% - 100px);
+  margin-top: 100px;
+  overflow: hidden auto;
+  scroll-behavior: smooth;
+}
+
+.section-container{
+  width: 100%;
+}
+
+.view-container{
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.main-body::-webkit-scrollbar {
+  width: 10px;
+}
+
+.main-body::-webkit-scrollbar-thumb {
+  background-color: rgb(var(--secondary));
+  border-radius: 10px;
+}
+
+.k2d-thin {
+  font-family: "K2D", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.k2d-extralight {
+  font-family: "K2D", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.k2d-light {
+  font-family: "K2D", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.k2d-regular {
+  font-family: "K2D", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.k2d-medium {
+  font-family: "K2D", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.k2d-semibold {
+  font-family: "K2D", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.k2d-bold {
+  font-family: "K2D", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.k2d-extrabold {
+  font-family: "K2D", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.k2d-thin-italic {
+  font-family: "K2D", sans-serif;
+  font-weight: 100;
+  font-style: italic;
+}
+
+.k2d-extralight-italic {
+  font-family: "K2D", sans-serif;
+  font-weight: 200;
+  font-style: italic;
+}
+
+.k2d-light-italic {
+  font-family: "K2D", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.k2d-regular-italic {
+  font-family: "K2D", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.k2d-medium-italic {
+  font-family: "K2D", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.k2d-semibold-italic {
+  font-family: "K2D", sans-serif;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.k2d-bold-italic {
+  font-family: "K2D", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.k2d-extrabold-italic {
+  font-family: "K2D", sans-serif;
+  font-weight: 800;
+  font-style: italic;
+}
+
+@tailwind utilities;
