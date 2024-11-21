@@ -62,13 +62,13 @@ export default function Landing( { theme } : { theme : string } ) {
         <>
             <div className='section-container h-full relative flex justify-center items-center' id='home'>
                 <img src={ theme == 'light' ? bgImage : bgImageDark} alt='Innoctix Landing' className='w-full lg:h-full object-cover object-right absolute bottom-0 h-[50%]' />
-                <div className='view-container flex flex-col justify-center h-full absolute px-2 pb-[100px] tracking-widest'>
+                <div className='view-container flex flex-col justify-center h-full absolute px-6 pb-[100px] tracking-widest'>
                     <p className='text-2xl md:text-4xl k2d-bold text-headerColor'>Welcome to</p>
                     <h1 className='text-[66px] md:text-[100px] lg:text-[130px] my-0 leading-[66px] md:leading-[130px] k2d-bold text-primary'>Innoctix</h1>
                     <p className='text-2xl md:text-4xl k2d-bold text-secondary'>Where ideas meet Innovation</p>
                     <div className='flex flex-col gap-5 md:flex-row mt-10 md:mt-20'>
-                        <a className='flex justify-center border-primary border-2 hover:bg-primary hover:shadow-xl hover:text-white transition-all px-8 py-4 mr-4 rounded-md uppercase text-primary k2d-bold text-base md:text-xl cursor-pointer' href='#projects'>Explore our Solutions</a>
-                        <a className='flex justify-center bg-secondary/85 hover:bg-secondary hover:shadow-xl transition-all px-8 py-4 mr-4 rounded-md border-2 border-secondary uppercase text-white k2d-bold text-base md:text-xl cursor-pointer' href='#connect'>Get in Touch</a>
+                        <a className='flex justify-center border-primary border-2 hover:bg-primary hover:shadow-xl hover:text-white transition-all px-8 py-4 md:mr-4 rounded-md uppercase text-primary k2d-bold text-base md:text-xl cursor-pointer' href='#projects'>Explore our Solutions</a>
+                        <a className='flex justify-center bg-secondary/85 hover:bg-secondary hover:shadow-xl transition-all px-8 py-4 md:mr-4 rounded-md border-2 border-secondary uppercase text-white k2d-bold text-base md:text-xl cursor-pointer' href='#connect'>Get in Touch</a>
                     </div>
                 </div>
             </div>
@@ -83,8 +83,8 @@ export default function Landing( { theme } : { theme : string } ) {
                     <p className='text-base md:text-3xl k2d-light text-textColor leading-5 md:leading-10'>At INNOCTIX, innovation isn’t just a goal; it’s our DNA</p>
                 </div>
                 <div className='flex flex-col gap-5 md:flex-row mt-10 md:mt-20'>
-                    <a className='flex justify-center border-primary border-2 hover:bg-primary hover:shadow-xl hover:text-white transition-all px-8 py-4 mr-4 rounded-md uppercase text-primary k2d-bold text-xl cursor-pointer' href='#projects'>Explore our Solutions</a>
-                    <a className='flex justify-center bg-secondary/85 hover:bg-secondary hover:shadow-xl transition-all px-8 py-4 mr-4 rounded-md border-2 border-secondary uppercase text-white k2d-bold text-xl cursor-pointer' href='#connect'>Get in Touch</a>
+                    <a className='flex justify-center border-primary border-2 hover:bg-primary hover:shadow-xl hover:text-white transition-all px-8 py-4 md:mr-4 rounded-md uppercase text-primary k2d-bold text-base md:text-xl cursor-pointer' href='#projects'>Explore our Solutions</a>
+                    <a className='flex justify-center bg-secondary/85 hover:bg-secondary hover:shadow-xl transition-all px-8 py-4 md:mr-4 rounded-md border-2 border-secondary uppercase text-white k2d-bold text-base md:text-xl cursor-pointer' href='#connect'>Get in Touch</a>
                 </div>
             </div>
             <div className='section-container flex flex-col items-center pt-20'>
@@ -108,8 +108,9 @@ export default function Landing( { theme } : { theme : string } ) {
                     Our Upcoming Projects
                     <span className='absolute h-[5px] md:h-[10px] w-3/4 bg-gradient-to-r from-primary to-secondary rounded-full -bottom-4 md:-bottom-6 left-10 md:left-20'></span>
                 </h2>
-                <div className='view-container flex flex-col justify-start py-0 md:py-20 px-0 md:px-8 gap-10 tracking-widest max-w-[1300px] text-center'>
-                    <div className='w-full flex justify-around py-20 px-8 gap-10 md:gap-16 tracking-widest text-justify flex-wrap'>
+                <div className='view-container flex flex-col justify-start py-10 md:py-20 px-0 md:px-8 tracking-widest max-w-[1300px] text-center'>
+                    <p className='text-base md:text-2xl'>With 5 to 10 projects in the pipeline, we’re poised to make significant impact across various domains. Here’s glimpse of what’s on the horizon:</p>
+                    <div className='w-full flex justify-around py-10 px-8 gap-10 md:gap-16 tracking-widest text-justify flex-wrap'>
                         {
                             projects.map((item, index) => (
                                 <div key={index} className='flex flex-col basis-[500px] flex-grow max-w-[600px] gap-4 bg-bgColor shadow-box p-4 rounded-xl cursor-pointer'>

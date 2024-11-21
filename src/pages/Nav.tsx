@@ -17,12 +17,12 @@ export default function Nav({ theme, setTheme } : NavProps) {
     }
 
     return (
-        <nav className='w-full h-[100px] shadow-box fixed pr-4 bg-bgColor z-50'>
+        <nav className='w-full h-[70px] sm:h-[100px] shadow-box fixed pr-4 bg-bgColor z-50'>
             <div className='view-container flex justify-between items-center px-2 h-full'>
                 <img src={Logo} alt='Innoctix Logo' className='h-[60px] md:h-[80px]' />
 
                 <div className='flex items-center'>
-                    <button className='lg:hidden mr-5 k2d-bold' onClick={() => setTheme((prev: 'light' | 'dark') => prev === 'dark' ? 'light' : 'dark' )} title={theme === 'dark' ? 'light' : 'dark' }>{ themes[theme] }</button>
+                    <button className='justify-center lg:hidden mr-5 k2d-bold' onClick={() => setTheme((prev: 'light' | 'dark') => prev === 'dark' ? 'light' : 'dark' )} title={theme === 'dark' ? 'light' : 'dark' }>{ themes[theme] }</button>
                     <button className='lg:hidden' onClick={() => setMenuOpen(!menuOpen)}>
                         { menuOpen ? <svg className='fill-headerColor stroke-headerColor' strokeWidth="0" viewBox="0 0 512 512" height="50px" width="50px" xmlns="http://www.w3.org/2000/svg"><path fill="none" strokeLinecap="round" strokeMiterlimit="10" strokeWidth="48" d="M368 368L144 144M368 144L144 368"></path></svg> :
                         <svg className='fill-headerColor stroke-headerColor' strokeWidth="0" viewBox="0 0 512 512" height="50px" width="50px" xmlns="http://www.w3.org/2000/svg"><path fill="none" strokeLinecap="round" strokeMiterlimit="10" strokeWidth="48" d="M88 152h336M88 256h336M88 360h336"></path></svg>}
@@ -40,7 +40,7 @@ export default function Nav({ theme, setTheme } : NavProps) {
                         <li className='mb-4 lg:mb-0'>
                             <HashLink to="/#connect" onClick={() => setMenuOpen(false)} >Connect</HashLink>
                         </li>
-                        <li className='hidden lg:block'>
+                        <li className='hidden lg:flex justify-center'>
                             <button className='k2d-bold' onClick={() => setTheme((prev: 'light' | 'dark') => prev === 'dark' ? 'light' : 'dark' )} title={theme === 'dark' ? 'light' : 'dark' }>{ themes[theme] }</button>
                         </li>
                     </ul>
