@@ -5,10 +5,19 @@ import { useEffect, useState } from 'react';
 
 function App() {
 
-  const [theme, setTheme] = useState< 'light' | 'dark' >('light');
+  const [theme, setTheme] = useState< 'light' | 'dark' | '' >('');
 
   useEffect(() => {
-    document.documentElement.setAttribute('data-theme', theme);
+    const localTheme = localStorage.getItem('theme') as 'light' | 'dark' | '';
+    if (localTheme) setTheme(localTheme);
+    else setTheme('light');
+  }, []);
+
+  useEffect(() => {
+    if (theme) {
+      document.documentElement.setAttribute('data-theme', theme);
+      localStorage.setItem('theme', theme);
+    }
   }, [theme]);
 
   return (
