@@ -18,7 +18,7 @@ export default function Nav({ theme, setTheme } : NavProps) {
     }
 
     return (
-        <nav className='w-full h-[0px] sm:h-[100px] shadow-box fixed pr-4 bg-bgColor z-50'>
+        <nav className='w-full h-[80px] sm:h-[100px] shadow-box fixed pr-4 bg-bgColor z-50'>
             <div className='view-container flex justify-between items-center px-2 h-full'>
                 <img src={Logo} alt='Innoctix Logo' className='h-[60px] md:h-[80px]' />
 
